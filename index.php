@@ -1,0 +1,821 @@
+<?php include 'header.php'; ?>
+
+<main>
+    <section class="hero">
+        <div class="container-fluid px-custom">
+            <div class="row hero-top">
+                <div class="col-6">
+                    <div class="hero-title">
+                        <h1>For the World<br>Ahead <span class="italic-serif">Ready.</span></h1>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="hero-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur. Arcu pellentesque turpis tellus et morbi. Arcu in
+                            mauris diam vel euismod a. Nec eleifend id purus mi. Consectetur cursus porttitor ornare
+                            gravida quis. Sem nunc</p>
+                        <a href="#" class="btn-primary">Inquire Now <svg width="34" height="34" viewBox="0 0 34 34"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="17" cy="17" r="17" fill="white" />
+                                <path d="M9.5 26.5L24.5 11.5M24.5 22.75V11.5H13.25" stroke="#03428E" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-image-container">
+                        <img src="images/hero-banner.png" alt="Ananya Campus" title="Ananya Campus"
+                            class="img-fluid hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Components Demo Section: Academic Programs -->
+    <section class="academic-programs mt_100">
+        <div class="container-fluid">
+            <!-- Common Section Title Component -->
+            <div class="section-title">
+                <div class="subtitle">
+                    <span class="line"></span>
+                    ACADEMIC OVERVIEW
+                    <span class="line"></span>
+                </div>
+                <h2 class="title_66">Our Academic <span class="italic-serif">Programs</span></h2>
+                <p>Explore our diverse academic programs designed to equip students with knowledge, skills, and
+                    practical experience. From undergraduate to postgraduate courses, we provide opportunities for
+                    hands-on learning, research, and career-ready education.</p>
+            </div>
+
+            <!-- Common Image Card Component Array -->
+            <div class="row">
+                <?php
+                $programs = [
+                    [
+                        'title' => 'Pre-Primary',
+                        'desc' => '',
+                        'image' => 'images/academic-pre-primary.png'
+                    ],
+                    [
+                        'title' => 'Primary School',
+                        'desc' => 'A foundation stage that builds academic skills, confidence, creativity, and curiosity in students',
+                        'image' => 'images/academic-primary.png'
+                    ],
+                    [
+                        'title' => 'Secondary',
+                        'desc' => 'lorem',
+                        'image' => 'images/academic-secondary.png'
+                    ],
+                    [
+                        'title' => 'Senior Secondary',
+                        'desc' => 'lorem',
+                        'image' => 'images/academic-senior-secondary.png'
+                    ]
+                ];
+
+                foreach ($programs as $program) {
+                    ?>
+                <div class="col-3">
+                    <div class="image-card">
+                        <img src="<?php echo $program['image']; ?>" class="img-fluid"
+                            alt="<?php echo $program['title']; ?>" title="<?php echo $program['title']; ?>">
+                        <div class="card-overlay">
+                            <h3 class="title_white_24">
+                                <?php echo $program['title']; ?>
+                            </h3>
+                            <?php if (!empty($program['desc'])): ?>
+                            <p>
+                                <?php echo $program['desc']; ?>
+                            </p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- World-Class Campus Facilities Section -->
+    <section class="campus-facilities mt_100 ">
+        <div class="container-fluid">
+            <!-- Top header area -->
+            <div class="row mb-5 align-items-center">
+                <div class="col-6">
+                    <div class="section-title text-start m-0">
+                        <div class="subtitle">
+                            <span class="line"></span>
+                            LIFE AT ANANYA
+                        </div>
+                        <h2 class="title_66">World-Class Campus <br> <span class="italic-serif">Facilities</span></h2>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-4 section-desc-lg">Lorem ipsum dolor sit amet consectetur. Ornare vestibulum amet
+                        tortor aliquet amet. Sed adipiscing pretium velit proin. Nisi vitae commodo nam cras tempus
+                        tellus tortor felis turpis. Arcu aliquam est eget ut. Ultricies quisque risus nunc egestas.
+                        Luctus gravida nam condimentum id tortor vel. Cursus semper sed.</p>
+                    <a href="#" class="btn-primary">Explore More <svg width="34" height="34" viewBox="0 0 34 34"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="17" fill="white" />
+                            <path d="M9.5 26.5L24.5 11.5M24.5 22.75V11.5H13.25" stroke="#03428E" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- Bento Grid Area -->
+            <div class="row g-4">
+                <!-- Left Tall Card -->
+                <div class="col-6">
+                    <div class="image-card tall-card">
+                        <img src="images/campus-clubs-activities.png" alt="Clubs & Activities"
+                            title="Clubs & Activities" class="img-fluid">
+                        <div class="card-overlay">
+                            <h3 class="title_white_24">Clubs & Activities</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, aliquid libero nihil asperiores facilis, illo, ullam eum ipsa officiis unde cumque eaque? Sunt cum fugit ab vel nisi, nam quae!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side -->
+                <div class="col-6">
+                    <div class="row h-100">
+                        <!-- Top row -->
+                        <div class="col-6">
+                            <div class="image-card small-card">
+                                <img src="images/campus-arts-crafts.png" alt="Arts & Crafts"
+                                    title="Arts & Crafts" class="img-fluid">
+                                <div class="card-overlay">
+                            <h3 class="title_white_24">Arts & Crafts</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, aliquid libero nihil asperiores facilis, illo, ullam eum ipsa officiis unde cumque eaque? Sunt cum fugit ab vel nisi, nam quae!</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="image-card small-card">
+                                <img src="images/campus-celebrations-events.png" alt="Celebrations & Events"
+                                    title="Celebrations & Events" class="img-fluid">
+                                <div class="card-overlay">
+                            <h3 class="title_white_24">Celebrations & Events</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, aliquid libero nihil asperiores facilis, illo, ullam eum ipsa officiis unde cumque eaque? Sunt cum fugit ab vel nisi, nam quae!</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom row -->
+                        <div class="col-12 mt-auto">
+                            <div class="image-card wide-card">
+                                <img src="images/campus-sports-games.png" alt="Sports & Games"
+                                    title="Sports & Games" class="img-fluid">
+                                <div class="card-overlay">
+                            <h3 class="title_white_24">Sports & Games</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, aliquid libero nihil asperiores facilis, illo, ullam eum ipsa officiis unde cumque eaque? Sunt cum fugit ab vel nisi, nam quae!</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Academics & Curriculum: The Intellectual Pillars Section -->
+    <section class="intellectual-pillars mt_100">
+        <div class="container-fluid px-custom">
+            <!-- Reusable title -->
+            <div class="section-title mb-2">
+                <div class="subtitle">
+                    <span class="line"></span>
+                    ACADEMICS & CURRICULUM
+                    <span class="line"></span>
+                </div>
+                <h2 class="title_66">The Intellectual <span class="italic-serif">Pillars</span></h2>
+            </div>
+
+            <!-- Custom Tabs Navigation -->
+            <div class="d-flex justify-content-center mb-5">
+                <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-science-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-science" type="button" role="tab">Science</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-commerce-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-commerce" type="button" role="tab">Commerce</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-humanities-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-humanities" type="button" role="tab">Humanities</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="tab-content" id="pills-tabContent">
+                <!-- Science Tab (Dummy) -->
+                <div class="tab-pane fade" id="pills-science" role="tabpanel">
+                    <div class="row align-items-center">
+                        <div class="col-6" style="padding-right: 50px;">
+                            <h3 class="tab-heading">Analytical Thinkers & <br><span
+                                    class="italic-serif text-secondary text-secondary-light">Future Innovators</span>
+                            </h3>
+                            <p class="tab-desc mt-4 mb-4">Perfect for students who wish to explore the laws of nature,
+                                advanced computing, and medical sciences. Fosters exceptional problem-solving and
+                                critical analysis.</p>
+
+                            <div class="pill-tags mb-4">
+                                <span class="pill-tag">Physics</span>
+                                <span class="pill-tag">Chemistry</span>
+                                <span class="pill-tag">Biology</span>
+                                <span class="pill-tag">Mathematics</span>
+                                <span class="pill-tag">Computer Science</span>
+                            </div>
+
+                            <ul class="check-list">
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Intensive writing programs and national-level debate training.</li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Applied research projects in historical archives and sociological studies.
+                                </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ State-of-the-art studio access for fine arts and design creation.</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="tab-image-container">
+                                <img src="images/intellectual-pillars-tab.png" alt="Science" title="Science"
+                                    class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commerce Tab (Dummy) -->
+                <div class="tab-pane fade" id="pills-commerce" role="tabpanel">
+                    <div class="row align-items-center">
+                        <div class="col-6" style="padding-right: 50px;">
+                            <h3 class="tab-heading">Financial Experts & <br><span
+                                    class="italic-serif text-secondary text-secondary-light">Business Leaders</span>
+                            </h3>
+                            <p class="tab-desc mt-4 mb-4">Ideal for students aiming to understand global markets,
+                                corporate finance, and business management. Develops strong analytical and
+                                entrepreneurial skills.</p>
+
+                            <div class="pill-tags mb-4">
+                                <span class="pill-tag">Accountancy</span>
+                                <span class="pill-tag">Business Studies</span>
+                                <span class="pill-tag">Economics</span>
+                                <span class="pill-tag">Mathematics</span>
+                                <span class="pill-tag">Entrepreneurship</span>
+                            </div>
+
+                            <ul class="check-list">
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Intensive writing programs and national-level debate training.</li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Applied research projects in historical archives and sociological studies.
+                                </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ State-of-the-art studio access for fine arts and design creation.</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="tab-image-container">
+                                <img src="images/intellectual-pillars-tab.png" alt="Commerce" title="Commerce"
+                                    class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humanities Tab (Active) -->
+                <div class="tab-pane fade show active" id="pills-humanities" role="tabpanel">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <h3 class="tab-heading">Deep Critical Thinkers & <br><span
+                                    class="italic-serif">Social Visionaries</span>
+                            </h3>
+                            <p class="tab-desc mt-4 mb-4">Perfect for students who wish to analyze historical layers,
+                                artistic expressions, legal dynamics, and psychological pathways. Fosters exceptional
+                                debate, high research capability, and design intelligence.</p>
+
+                            <div class="pill-tags mb-4">
+                                <span class="pill-tag">History</span>
+                                <span class="pill-tag">Political Science</span>
+                                <span class="pill-tag">Psychology</span>
+                                <span class="pill-tag">Sociology</span>
+                                <span class="pill-tag">Fine Arts / English</span>
+                            </div>
+
+                            <ul class="check-list">
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Intensive writing programs and national-level debate training.</li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ Applied research projects in historical archives and sociological studies.
+                                </li>
+                                <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6666 5L7.49998 14.1667L3.33331 10" stroke="#F58220" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ State-of-the-art studio access for fine arts and design creation.</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="tab-image-container">
+                                <img src="images/intellectual-pillars-tab.png" alt="Humanities"
+                                    title="Humanities" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy of Excellence Section -->
+    <section class="legacy-excellence mt_100">
+        <div class="container-fluid px-custom">
+            <!-- Top header area -->
+            <div class="row mb-5 align-items-center">
+                <div class="col-6">
+                    <div class="section-title text-start m-0">
+                        <div class="subtitle">
+                            <span class="line"></span>
+                            ACADEMIC OVERVIEW
+                        </div>
+                        <h2 class="title_66">A Legacy of Excellence <br> <span class="italic-serif">in Education</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-4 section-desc-lg">Ananya Vidyalaya is a co-educational English Medium CBSE school
+                        committed to the highest standards of learning. We believe every child is unique — each student
+                        is nurtured and guided so their individual potential blossoms into true excellence, preparing
+                        them to be responsible citizens of India and the world.</p>
+                    <a href="#" class="btn-primary">Explore More <svg width="34" height="34" viewBox="0 0 34 34"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="17" fill="white" />
+                            <path d="M9.5 26.5L24.5 11.5M24.5 22.75V11.5H13.25" stroke="#03428E" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
+                </div>
+            </div>
+
+            <!-- Cards Area -->
+            <div class="row g-4">
+                <div class="col-6">
+                    <div class="image-card tall-card">
+                        <img src="images/legacy-our-story.png" alt="Our Story" title="Our Story"
+                            class="img-fluid">
+                        <div class="card-overlay">
+                            <h3 class="title_white_24">Our Story</h3>
+                            <p>Ananya Vidyalaya, located in the serene Zundal area of Ahmedabad, was founded with a
+                                vision to provide world-class education with a personal touch— nurturing every child in
+                                a warm and inspiring environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex flex-column gap-4 h-100">
+                        <div class="info-card bg-blue flex-grow-1 d-flex flex-column justify-content-center">
+                            <h3>Our Vision</h3>
+                            <p>Promoting knowledge that enlightens by creatively enhancing learning processes and
+                                integrating tradition with modern educational technology to contribute towards creating
+                                a new world.</p>
+                        </div>
+                        <div class="info-card bg-light-orange flex-grow-1 d-flex flex-column justify-content-center">
+                            <h3 style="color:var(--black-111);">Our Mission</h3>
+                            <p>To facilitate an environment of learning where students and teachers develop skills of
+                                discipline, analytical and creative thinking, ethical and global mindset, and
+                                multilingual and collaborative approaches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Campus: The Architectural Canvas Section -->
+    <section class="architectural-canvas mt_100">
+        <div class="container-fluid px-custom">
+            <!-- Reusable title -->
+            <div class="section-title">
+                <div class="subtitle">
+                    <span class="line"></span>
+                    OUR CAMPUS
+                    <span class="line"></span>
+                </div>
+                <h2 class="title_66">The Architectural <span class="italic-serif">Canvas</span></h2>
+                <p>Set in the serene and fast-developing Zundal area, our campus offers world-class facilities amidst
+                    open spaces and fresh air.</p>
+            </div>
+
+            <!-- Full Width Image Card -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="image-card w-100 hero-card-banner">
+                        <img src="images/architectural-canvas.png" alt="Campus" title="Campus"
+                            class="img-fluid">
+                        <div class="card-overlay" style="padding: 50px;">
+                            <p class="text-uppercase mb-2 overlay-subtitle">Zundal, Ahmedabad</p>
+                            <h3 class="overlay-title-lg">Where Learning Meets Nature</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="row text-center mt-5">
+                <div class="col-3 px-4">
+                    <div class="feature-icon-box mb-4">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <path d="M9 22v-4h6v4"></path>
+                            <path d="M8 6h.01"></path>
+                            <path d="M16 6h.01"></path>
+                            <path d="M12 6h.01"></path>
+                            <path d="M12 10h.01"></path>
+                            <path d="M12 14h.01"></path>
+                            <path d="M16 10h.01"></path>
+                            <path d="M16 14h.01"></path>
+                            <path d="M8 10h.01"></path>
+                            <path d="M8 14h.01"></path>
+                        </svg>
+                    </div>
+                    <h4 class="mb-3 title_black_24">Modern Architecture</h4>
+                    <p>Spacious classrooms with natural lighting and ventilation designed for focused learning.</p>
+                </div>
+                <div class="col-3 px-4">
+                    <div class="feature-icon-box mb-4">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 18H14" stroke="#F58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 22H21" stroke="#F58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 22C17.8634 22 21 18.8634 21 15C21 11.1366 17.8634 8 14 8H13" stroke="#F58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 14H11" stroke="#F58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 12C7.89617 12 7 11.1038 7 10V6H13V10C13 11.1038 12.1038 12 11 12H9" stroke="#F58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 6V3C12 2.44808 11.5519 2 11 2H9C8.44808 2 8 2.44808 8 3V6" stroke="#F58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                    </div>
+                    <h4 class="mb-3 title_black_24">Advanced Laboratories</h4>
+                    <p>State-of-the-art science and computer labs equipped with the latest technology.</p>
+                </div>
+                <div class="col-3 px-4">
+                    <div class="feature-icon-box mb-4">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="mb-3 title_black_24">Resource Library</h4>
+                    <p>Extensive library with thousands of books, digital resources and quiet study areas.</p>
+                </div>
+                <div class="col-3 px-4">
+                    <div class="feature-icon-box mb-4">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 21h8"></path>
+                            <path d="M12 17v4"></path>
+                            <path d="M7 4h10"></path>
+                            <path d="M17 4v8a5 5 0 0 1-10 0V4"></path>
+                            <path d="M7 4H4a2 2 0 0 0-2 2v2a5 5 0 0 0 5 5h0"></path>
+                            <path d="M17 4h3a2 2 0 0 1 2 2v2a5 5 0 0 1-5 5h0"></path>
+                        </svg>
+                    </div>
+                    <h4 class="mb-3 title_black_24">Sports Complex</h4>
+                    <p>Full-size sports grounds for cricket, football, volleyball, skating and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us mt_100">
+        <div class="container-fluid px-custom">
+            <!-- Reusable title -->
+            <div class="section-title">
+                <div class="subtitle">
+                    <span class="line"></span>
+                    WHY CHOOSE US
+                    <span class="line"></span>
+                </div>
+                <h2 class="title_66">More Than a School <span class="italic-serif text-primary-blue">a Community.</span>
+                </h2>
+                <p>Our campus fosters academic excellence and holistic growth. With experienced faculty,
+                    state-of-the-art facilities, and a vibrant community, we prepare students for success in their
+                    careers.</p>
+            </div>
+
+            <!-- Content Area -->
+            <div class="row align-items-center mt-5">
+                <!-- Left Image -->
+                <div class="col-5">
+                    <img src="https://picsum.photos/seed/ananya1/800/600" alt="Reception" title="Reception"
+                        class="img-fluid rounded-banner-img">
+                </div>
+                <!-- Right Grid -->
+                <div class="col-7 ps-5">
+                    <div class="row gx-5 gy-5">
+                        <div class="col-6">
+                            <div class="why-feature-box pb-5 border-bottom-light">
+                                <div class="icon-box-small mb-4">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="mb-3 title_black_24">Excellence in Academics</h4>
+                                <p>Our academic programs are designed to challenge and inspire students, ensuring a
+                                    strong foundation and preparing them for future success.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="why-feature-box pb-5 border-bottom-light">
+                                <div class="icon-box-small mb-4">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="8" r="7"></circle>
+                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                    </svg>
+                                </div>
+                                <h4 class="mb-3 title_black_24">Recognized Achievements</h4>
+                                <p>Our university is recognized nationally and internationally for outstanding research,
+                                    innovation, and student accomplishments.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="why-feature-box pt-2 border-bottom-light">
+                                <div class="icon-box-small mb-4">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="mb-3 title_black_24">Expert Faculty</h4>
+                                <p>Learn from accomplished professors and industry leaders who are committed to
+                                    mentoring students and advancing knowledge in their fields.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="why-feature-box pt-2 border-bottom-light">
+                                <div class="icon-box-small mb-4">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 21h18"></path>
+                                        <path d="M4 21v-7"></path>
+                                        <path d="M20 21v-7"></path>
+                                        <path d="M8 21v-7"></path>
+                                        <path d="M16 21v-7"></path>
+                                        <path d="M12 21v-7"></path>
+                                        <path d="M2 14h20"></path>
+                                        <path d="M12 3l10 5H2L12 3z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="mb-3 title_black_24">Innovative Campus</h4>
+                                <p>Study in a modern campus designed for collaboration, creativity, and research,
+                                    equipped with the latest technology and learning spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Admission Process Section -->
+    <section class="admission-process mt_100 mb_100">
+        <div class="container-fluid px-custom">
+            <!-- Main Wrapper -->
+            <div class="process-wrapper position-relative rounded-4 process-wrapper-bg">
+
+                <!-- Decorative dots top left -->
+                <div class="position-absolute d-none d-lg-flex align-items-center dots-top-left">
+                    <div class="dot-line"></div>
+                    <div class="dot-circle"></div>
+                    <div class="dot-circle-md"></div>
+                    <div class="dot-circle-sm"></div>
+                </div>
+
+                <div class="row align-items-center">
+                    <!-- Left Side Text and Steps -->
+                    <div class="col-7 pe-5">
+                        <div class="section-title text-start m-0 mb-5">
+                            <div class="subtitle">
+                                <span class="line"></span>
+                                ADMISSION INFO
+                            </div>
+                            <h2 class="title_66">Our Admission <span class="italic-serif">Process</span></h2>
+                        </div>
+
+                        <div class="row">
+                            <!-- Step 1 -->
+                            <div class="col-4 border-end pe-4 border-light-custom">
+                                <div class="icon-box-small bg-white mb-4 icon-box-shadow">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+                                        <circle cx="9" cy="10" r="2"></circle>
+                                        <line x1="15" y1="10" x2="19" y2="10"></line>
+                                        <line x1="15" y1="14" x2="19" y2="14"></line>
+                                        <path d="M13 16a4 4 0 0 0-8 0"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="process-title">Explore Programs</h4>
+                                <p class="process-desc">Browse our wide range of undergraduate and postgraduate programs
+                                    to find the perfect fit for your academic goals.</p>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="col-4 border-end px-4 border-light-custom">
+                                <div class="icon-box-small bg-white mb-4 icon-box-shadow">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <h4 class="process-title">Submit Application</h4>
+                                <p class="process-desc">Complete the online application form with your personal details,
+                                    academic records, and required documents for review.</p>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="col-4 ps-4">
+                                <div class="icon-box-small bg-white mb-4 icon-box-shadow">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <polyline points="9 15 11 17 15 13"></polyline>
+                                    </svg>
+                                </div>
+                                <h4 class="process-title">Get Admission</h4>
+                                <p class="process-desc">Receive your admission confirmation and start your journey at
+                                    our campus with orientation and enrollment guidance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Image -->
+                    <div class="col-5 position-relative">
+                        <img src="https://picsum.photos/seed/ananya3/1200/800" alt="Admission Process"
+                            title="Admission Process" class="img-fluid process-img-offset">
+                    </div>
+                </div>
+
+                <!-- Decorative dots bottom right -->
+                <div class="position-absolute d-none d-lg-flex align-items-center dots-bottom-right">
+                    <div class="dot-circle-sm"></div>
+                    <div class="dot-circle-md"></div>
+                    <div class="dot-circle"></div>
+                    <div class="dot-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions / Join Our Academic Community Section -->
+    <section class="admissions-section mt_100 mb_100">
+        <div class="container-fluid px-custom">
+            <div class="admissions-wrapper">
+                <!-- Background Image with Overlay -->
+                <div class="admissions-bg">
+                    <img src="https://picsum.photos/seed/ananya4/1920/1080" alt="Admissions Background"
+                        title="Admissions Background" class="img-fluid">
+                    <div class="admissions-overlay"></div>
+                </div>
+
+                <div class="row position-relative z-index-1 align-items-center">
+                    <!-- Left Side: Timeline -->
+                    <div class="col-6 text-white pe-5">
+                        <h2 class="title_66 mb-0 text-white">Join Our Academic</h2>
+                        <h2 class="title_66 italic-serif text-white">Community</h2>
+                        <p class="mb-5 admissions-desc">We admit students who display curiosity, intellectual capacity,
+                            and core collaboration capabilities. Follow our straightforward four-step onboarding
+                            process:</p>
+
+                        <div class="timeline">
+                            <div class="timeline-step">
+                                <div class="step-number">01</div>
+                                <div class="step-content">
+                                    <h4>Submit Inquiry Details</h4>
+                                    <p>Fill out the detailed online form on the right. Our primary counselor will
+                                        contact you within 24 hours.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-number">02</div>
+                                <div class="step-content">
+                                    <h4>Campus Tour & Presentation</h4>
+                                    <p>Visit our spacious Gandhinagar campus to explore libraries, active science labs,
+                                        and sports arenas.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-number">03</div>
+                                <div class="step-content">
+                                    <h4>Interaction & Assessment</h4>
+                                    <p>A brief cognitive and academic assessment is scheduled for the applicant to align
+                                        core placements.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-number">04</div>
+                                <div class="step-content">
+                                    <h4>Enrollment Confirmation</h4>
+                                    <p>Upon administrative confirmation, secure document filings and complete balance
+                                        fee payouts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Form -->
+                    <div class="col-6 ps-5">
+                        <div class="form-card bg-white p-5 rounded-4 form-card-rounded">
+                            <h3 class="mb-2 form-heading">Admissions Inquiry Form</h3>
+                            <p class="mb-5 form-subheading">Complete this secure form to download the digital school
+                                prospectus.</p>
+
+                            <form>
+                                <div class="mb-4">
+                                    <label class="form-label form-label-custom">Parent / Guardian full name *</label>
+                                    <input type="text" class="form-control custom-input"
+                                        placeholder="e.g. Shri Rajesh Patel">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label form-label-custom">Student full name *</label>
+                                    <input type="text" class="form-control custom-input"
+                                        placeholder="e.g. Shri Rajesh Patel">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label form-label-custom">Target Grade / Class *</label>
+                                    <input type="text" class="form-control custom-input" placeholder="10th">
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-6">
+                                        <label class="form-label form-label-custom">Contact Number</label>
+                                        <input type="text" class="form-control custom-input"
+                                            placeholder="10-digit mobile number">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label form-label-custom">Email Address</label>
+                                        <input type="email" class="form-control custom-input"
+                                            placeholder="Enter email address">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label form-label-custom">Custom Questions or Admission
+                                        Requirements</label>
+                                    <textarea class="form-control custom-input" rows="3"
+                                        placeholder="Describe any educational requirements or request..."></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary border-0 w-100 mt-2 btn-submit-inquiry">
+                                    <span>Submit Inquiry</span>
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="17" cy="17" r="17" fill="white" />
+                                        <path d="M9.5 26.5L24.5 11.5M24.5 22.75V11.5H13.25" stroke="#03428E"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<?php include 'footer.php'; ?>
